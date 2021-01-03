@@ -29,13 +29,9 @@ const date: Date = new Date(),
                 return `th`;
         }
     };
-
-
-
 interface calendarArgs {
     month: string
 }
-
 export default class Calenda {
     public structure: object;
     private monthIdx: number;
@@ -48,7 +44,6 @@ export default class Calenda {
     constructor({
         month
     }: calendarArgs) {
-
         this.startingDay = getStartingDay(dayWeekNum, today);
         this.monthIdx = months.indexOf(month);
         this.year = defYear;
