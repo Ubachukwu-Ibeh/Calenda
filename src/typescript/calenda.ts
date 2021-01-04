@@ -29,7 +29,7 @@ const date: Date = new Date(),
                 return `th`;
         }
     };
-interface calendarArgs {
+interface ICalendarArgs {
     month: string
 }
 export default class Calenda {
@@ -43,7 +43,7 @@ export default class Calenda {
 
     constructor({
         month
-    }: calendarArgs) {
+    }: ICalendarArgs) {
         this.startingDay = getStartingDay(dayWeekNum, today);
         this.monthIdx = months.indexOf(month);
         this.year = defYear;
