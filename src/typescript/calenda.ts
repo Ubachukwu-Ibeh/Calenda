@@ -1,3 +1,5 @@
+import { IInfo, ICalendarArgs, IStructure } from './interfaces'
+
 const date: Date = new Date(),
     dayWeekNum: number = date.getDay(),
     today: number = date.getUTCDate(),
@@ -29,14 +31,12 @@ const date: Date = new Date(),
                 return `th`;
         }
     };
-interface ICalendarArgs {
-    month: string
-}
+
 export default class Calenda {
-    public structure: object;
+    public structure: IStructure | any;
     private monthIdx: number;
     private year: number;
-    private info: object;
+    private info: IInfo | any;
     private currentMonth: number;
     private prevMonth: number;
     private startingDay: number;
@@ -47,14 +47,14 @@ export default class Calenda {
         this.startingDay = getStartingDay(dayWeekNum, today);
         this.monthIdx = months.indexOf(month);
         this.year = defYear;
-        this.structure = {};
-        this.info = {};
         this.currentMonth = this.monthIdx;
         this.prevMonth = undefined;
+        this.structure = {};
+        this.info = {};
     }
-    public getStructure: Function = (): object => {
+    public getStructure: Function = (): Calenda => {
         let currentMonthLength = getMonthLength(this.monthIdx);
-        const monthArr = Array(currentMonthLength + this.startingDay).fill(0);
+        const monthArr: Array<number> = Array(currentMonthLength + this.startingDay).fill(0);
 
         for (let i = this.startingDay; i < monthArr.length; i++) {
             monthArr[i] = i - (this.startingDay - 1);
@@ -74,7 +74,7 @@ export default class Calenda {
         return this;
 
     }
-    public getInfo: Function = (day: number, options: object): object => {
+    public getInfo: Function = (day: number, options: object): IInfo => {
         for (const key in this.structure) {
             let daysArr = this.structure[key];
             for (let i = 0; i < daysArr.length; i++) {
@@ -100,7 +100,7 @@ export default class Calenda {
             }
         }
     }
-    public moveMonth: Function = (direction: string): object => {
+    public moveMonth: Function = (direction: string): Calenda => {
         let currentMonthLength = getMonthLength(this.monthIdx);
         return direction === 'forward' ?
             (() => {

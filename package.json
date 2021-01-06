@@ -1,0 +1,27 @@
+{
+  "name": "calenda",
+  "version": "1.0.0",
+  "description": "A solution for your date management. We've abstracted the complexities of calculating dates for you to use through our easy to use light-weight API. Build your time management apps faster.",
+  "main": "/src/calenda.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "calendar",
+    "date",
+    "time",
+    "event manager",
+    "event manager",
+    "calenda",
+    "time manager",
+    "time management"
+  ],
+  "author": "Ibeh Ubachukwu | @redbossrabbit",
+  "license": "MIT",
+  "repository":{
+    "type": "git",
+    "url": ""
+  },
+  "bugs": "",
+  "homepage": ""
+}

@@ -96,11 +96,14 @@ var Calenda = /** @class */ (function () {
         this.startingDay = getStartingDay(dayWeekNum, today);
         this.monthIdx = months.indexOf(month);
         this.year = defYear;
-        this.structure = {};
-        this.info = {};
         this.currentMonth = this.monthIdx;
         this.prevMonth = undefined;
+        this.structure = {};
+        this.info = {};
     }
     return Calenda;
 }());
 exports["default"] = Calenda;
+console.log(new Calenda({ 
+    month: 'January' 
+}).getStructure().structure)
