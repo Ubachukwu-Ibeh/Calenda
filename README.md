@@ -1,11 +1,21 @@
-<img src="calenda-logo.png" width="20"><h1>CalendaJS</h1>
+<p><img src="calenda-logo.png" width="50"> <span style='font-size: 40pt; font-family: Roboto; font-weight: lighter'> CalendaJS</span></p>
+
+A solution for your date management. We've abstracted the complexities of calculating dates for you to use through our easy to use light-weight library. Build your time management apps faster.
+
+## Sample
+
+> Head over to the [official website](https://calenda) for an interactive demonstration.
+
+
+<a href="#"><img src="sample.png" width="300"></a>
 
 - [Publication](https://calenda.web.app)
 
-* [Steps](#How-it-works)
-  + [Initialization](#Step-1)
-  + [Get the month structure](#Step-2)
-  + [Get information](#Step-3)
+* [How it works](#How-it-works)
+  + [Initialization](#Step-1:-Initialization)
+  + [Get the month structure](#Step-2:-Get-the-month-structure)
+  + [Get information](#Step-3:-Get-information)
+  + [Time travel](#Step-4:-Time-travel)
 
 ## How it works
 
@@ -14,7 +24,7 @@
 ```
 npm install calenda
 ```
-- Import the calenda
+- Import calenda into your project
 ```
 Import Calenda from 'calenda'
 ```
@@ -65,9 +75,53 @@ calendar.getStructure().getInfo(1, {
 ```
 {
    dayNumber: 1,
-   dayOfWeek: 'fri',
+   dayOfWeek: 'Fri',
    monthOfYear: 'January',
    year: 2021,
    suffix: 'st'
 }
 ```
+
+### Step 4: Time travel
+-  You can move forward or backward from the current month by calling the
+`moveMonth` method on the `calendar` object with either `forward` or
+`backward` as a string argument on the method. This method can be chained with other
+methods including itself to get your desired results.
+```
+calendar.moveMonth('forward').getStructure().getInfo(1, {
+  dayNumber: true,
+  dayOfWeek: true,
+  monthOfYear: true,
+  year: true,
+  suffix: true
+})
+```
+
+> This returns an object with the values of the specified options of the  next month `February`.
+
+```
+{
+   dayNumber: 1,
+   dayOfWeek: 'Mon',
+   monthOfYear: 'February',
+   year: 2021,
+   suffix: 'st'
+}
+```
+> The same applies for moving backwards.
+
+## Additional information
+
+### Support us
+
+#### Social media
+  * [Twitter](#Step-1:-Initialization)
+  * [Github](#Step-2:-Get-the-month-structure)
+
+#### Contribute
+  * [Github issues](#Step-2:-Get-the-month-structure)
+  
+#### Sponsor
+  * [Patreon](#Step-1:-Initialization)
+  * [Github sponsor](#Step-2:-Get-the-month-structure)
+

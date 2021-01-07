@@ -1,4 +1,3 @@
-"use strict";
 exports.__esModule = true;
 var date = new Date(), dayWeekNum = date.getDay(), today = date.getUTCDate(), defYear = date.getFullYear(), months = ['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], months30 = ['September', 'April', 'June', 'November'], getMonthLength = function (month) {
     switch (true) {
@@ -104,6 +103,3 @@ var Calenda = /** @class */ (function () {
     return Calenda;
 }());
 exports["default"] = Calenda;
-console.log(new Calenda({ 
-    month: 'January' 
-}).getStructure().structure)
