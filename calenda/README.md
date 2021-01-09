@@ -114,14 +114,10 @@ calendar.moveMonth('forward').getStructure().getInfo(1, {
 
 ### Support us
 
-#### Social media
-  * [Twitter](#Step-1:-Initialization)
-  * [Github](#Step-2:-Get-the-month-structure)
-
 #### Contribute
-  * [Github issues](#Step-2:-Get-the-month-structure)
+  * [Github issues](https://github.com/redbossrabbit)
   
 #### Sponsor
-  * [Patreon](#Step-1:-Initialization)
+  * [Patreon](https://patreon.com/qubeblox)
   * [Github sponsor](#Step-2:-Get-the-month-structure)
 
