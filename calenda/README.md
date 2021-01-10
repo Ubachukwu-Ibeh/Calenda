@@ -1,10 +1,11 @@
-<p><img src="calenda-logo.png" width="50"> <span style='font-size: 40pt; font-family: Roboto; font-weight: lighter'> CalendaJS</span></p>
+<p><img src="calenda-logo.png" width="50"></p>
+<h1>Calenda</h1>
 
 A solution for your date management. We've abstracted the complexities of calculating dates for you to use through our easy to use light-weight library. Build your time management apps faster.
 
 ## Sample
 
-> Head over to the [official website](https://calenda) for an interactive demonstration.
+> Head over to the [official website](https://calenda-website.web.app/) for an interactive demonstration.
 
 
 <a href="#"><img src="sample.png" width="300"></a>
@@ -119,5 +120,4 @@ calendar.moveMonth('forward').getStructure().getInfo(1, {
   
 #### Sponsor
   * [Patreon](https://patreon.com/qubeblox)
-  * [Github sponsor](#Step-2:-Get-the-month-structure)
 
