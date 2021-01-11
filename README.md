@@ -23,7 +23,7 @@ A solution for your date management. We've abstracted the complexities of calcul
 ### Step 1: Initialization
 - Run the command
 ```
-npm install calenda
+npm install --save-dev calenda
 ```
 - Import calenda into your project
 ```
