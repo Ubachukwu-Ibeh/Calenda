@@ -10,7 +10,7 @@ A solution for your date management. We've abstracted the complexities of calcul
 
 <a href="#"><img src="sample.png" width="300"></a>
 
-- [Publication](https://calenda.web.app)
+- [Get package](https://www.npmjs.com/package/calenda)
 
 * [How it works](#How-it-works)
   + [Initialization](#Step-1:-Initialization)
