@@ -1,6 +1,6 @@
 {
   "name": "calenda",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A solution for your date management. We've abstracted the complexities of calculating dates for you to use through our easy to use light-weight API. Build your time management apps faster.",
   "main": "/src/calenda.js",
   "scripts": {
