@@ -116,7 +116,7 @@ calendar.moveMonth('forward').getStructure().getInfo(1, {
 ### Support us
 
 #### Contribute
-  * [Github issues](https://github.com/redbossrabbit)
+  * [Github issues](https://github.com/redbossrabbit/Calenda/issues)
   
 #### Sponsor
   * [Patreon](https://patreon.com/qubeblox)
