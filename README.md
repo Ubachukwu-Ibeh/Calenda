@@ -1,7 +1,10 @@
-<p><img src="calenda-logo.png" width="50"></p>
+<img src="calenda-logo.png" width="50">
 <h1>Calenda</h1>
 
 A solution for your date management. We've abstracted the complexities of calculating dates for you to use through our easy to use light-weight library. Build your time management apps faster.
+
+<img src="https://img.shields.io/github/license/redbossrabbit/Calenda" width="90">
+<img src="https://img.shields.io/github/issues/redbossrabbit/Calenda" width="100">
 
 ## Sample
 
