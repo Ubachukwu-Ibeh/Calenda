@@ -29,14 +29,14 @@ A solution for your date management. We've abstracted the complexities of calcul
 npm install --save-dev calenda
 ```
 - Import calenda into your project
-```
+```js
 Import Calenda from 'calenda'
 ```
 - Create a `new` Calendar instance and pass in an object with a `month` property set to any month of the year.
 
 > Note: The year defaults to the current year you are in.
 
-```
+```js
 const calendar = new Calenda({
   month: 'January'
 });
@@ -44,7 +44,7 @@ const calendar = new Calenda({
 
 ### Step 2: Get the month structure
 - Call the `getStructure` method on the instance and get the `structure` property.
-```
+```js
 calendar.getStructure().structure;
 ```
 
@@ -64,7 +64,7 @@ calendar.getStructure().structure;
 
 ### Step 3: Get information
 -  Chain the `getInfo` method with the `getStructure` method and passing in a day of the month as a number as he first argument and an object with a set of options specifying the information you would like to get as the second argument.
-```
+```js
 calendar.getStructure().getInfo(1, {
   dayNumber: true,
   dayOfWeek: true,
@@ -91,7 +91,7 @@ calendar.getStructure().getInfo(1, {
 `moveMonth` method on the `calendar` object with either `forward` or
 `backward` as a string argument on the method. This method can be chained with other
 methods including itself to get your desired results.
-```
+```js
 calendar.moveMonth('forward').getStructure().getInfo(1, {
   dayNumber: true,
   dayOfWeek: true,
