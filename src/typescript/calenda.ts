@@ -19,14 +19,18 @@ const daysOfWeek: Array < string > = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 
 const months30: Array < string > = ['September', 'April', 'June', 'November'];
 
 const getMonthLength: Function = (month: number): number => {
+    
     switch (true) {
         case months30.includes(months[month]):
             return 30;
+
         case month === 1:
             return !(defYear % 4) ? 29 : 28;
+
         default:
             return 31;
     }
+    
 };
 
 const getStartingDay: Function = (dayWeekNum: number, dayNum: number): number => ((7 + dayWeekNum) - (dayNum - (7 * Math.floor(dayNum / 7)) - 1)) % 7;
