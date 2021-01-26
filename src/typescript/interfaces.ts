@@ -1,35 +1,29 @@
 export interface ICalendarArgs {
-
-    month: string
-
+  month: string;
 }
 export interface IInfo {
+  dayNumber: number;
 
-    dayNumber: number,
+  dayOfWeek: string;
 
-    dayOfWeek: string,
+  monthOfYear: string;
 
-    monthOfYear: string,
+  year: number;
 
-    year: number,
-
-    suffix: string
-
+  suffix: string;
 }
 export interface IStructure {
+  Sun: Array<number>;
 
-    Sun: Array<number>,
+  Mon: Array<number>;
 
-    Mon: Array<number>,
+  Tue: Array<number>;
 
-    Tue: Array<number>,
+  Wed: Array<number>;
 
-    Wed: Array<number>,
+  Thu: Array<number>;
 
-    Thu: Array<number>,
+  Fri: Array<number>;
 
-    Fri: Array<number>,
-
-    Sat: Array<number>
-    
+  Sat: Array<number>;
 }
