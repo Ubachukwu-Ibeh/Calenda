@@ -10,7 +10,7 @@ const defYear: number = date.getFullYear();
 
 const months: Array<string> = [
   "January",
-  "Feburary",
+  "February",
   "March",
   "April",
   "May",
