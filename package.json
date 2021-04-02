@@ -1,12 +1,12 @@
 {
   "name": "calenda",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A solution for your date management. We've abstracted the complexities of calculating dates for you to use through our easy to use light-weight API. Build your time management apps faster.",
   "main": "/src/calenda.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": "npm publish",
-    "compile": "tsc src/typescript/calenda"
+    "compile": "tsc"
   },
   "keywords": [
     "calendar",

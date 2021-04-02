@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var date = new Date();
 var dayWeekNum = date.getDay();
 var today = date.getUTCDate();
@@ -18,15 +16,7 @@ var months = [
     "November",
     "December"
 ];
-var daysOfWeek = [
-    "Sun",
-    "Mon",
-    "Tue",
-    "Wed",
-    "Thu",
-    "Fri",
-    "Sat"
-];
+var daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 var months30 = ["September", "April", "June", "November"];
 var getMonthLength = function (month) {
     switch (true) {
@@ -147,4 +137,4 @@ var Calenda = /** @class */ (function () {
     }
     return Calenda;
 }());
-exports["default"] = Calenda;
+export default Calenda;

@@ -1,14 +1,12 @@
-import { IInfo, ICalendarArgs, IStructure } from "./interfaces";
+const date = new Date();
 
-const date: Date = new Date();
+const dayWeekNum = date.getDay();
 
-const dayWeekNum: number = date.getDay();
+const today = date.getUTCDate();
 
-const today: number = date.getUTCDate();
+const defYear = date.getFullYear();
 
-const defYear: number = date.getFullYear();
-
-const months: Array<string> = [
+const months = [
   "January",
   "February",
   "March",
@@ -23,19 +21,11 @@ const months: Array<string> = [
   "December"
 ];
 
-const daysOfWeek: Array<string> = [
-  "Sun",
-  "Mon",
-  "Tue",
-  "Wed",
-  "Thu",
-  "Fri",
-  "Sat"
-];
+const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-const months30: Array<string> = ["September", "April", "June", "November"];
+const months30 = ["September", "April", "June", "November"];
 
-const getMonthLength: Function = (month: number): number => {
+const getMonthLength = (month: number) => {
   switch (true) {
     case months30.includes(months[month]):
       return 30;
@@ -48,10 +38,10 @@ const getMonthLength: Function = (month: number): number => {
   }
 };
 
-const getStartingDay: Function = (dayWeekNum: number, dayNum: number): number =>
+const getStartingDay = (dayWeekNum: number, dayNum: number) =>
   (7 + dayWeekNum - (dayNum - 7 * Math.floor(dayNum / 7) - 1)) % 7;
 
-const setDayOfWeekPrefix: Function = (id: number): string => {
+const setDayOfWeekPrefix = (id: number) => {
   let lastNum = `${id}`.slice(-1);
 
   switch (true) {
@@ -69,22 +59,34 @@ const setDayOfWeekPrefix: Function = (id: number): string => {
   }
 };
 
+interface IInfo {
+  dayNumber?: number;
+  dayOfWeek?: string;
+  monthOfYear?: string;
+  year?: number;
+  suffix?: string;
+}
+
 export default class Calenda {
-  public structure: IStructure | any;
+  public structure:
+    | {
+        [key: string]: Array<number>;
+      }
+    | {};
 
   private monthIdx: number;
 
   private year: number;
 
-  private info: IInfo | any;
+  private info: IInfo | {};
 
   private currentMonth: number;
 
-  private prevMonth: number;
+  private prevMonth: number | undefined;
 
   private startingDay: number;
 
-  constructor({ month }: ICalendarArgs) {
+  constructor({ month }: { month: string }) {
     this.startingDay = getStartingDay(dayWeekNum, today);
 
     this.monthIdx = months.indexOf(month);
@@ -99,12 +101,10 @@ export default class Calenda {
 
     this.info = {};
   }
-  public getStructure: Function = (): Calenda => {
+  public getStructure = () => {
     let currentMonthLength = getMonthLength(this.monthIdx);
 
-    const monthArr: Array<number> = Array(
-      currentMonthLength + this.startingDay
-    ).fill(0);
+    const monthArr = Array(currentMonthLength + this.startingDay).fill(0);
 
     for (let i = this.startingDay; i < monthArr.length; i++) {
       monthArr[i] = i - (this.startingDay - 1);
@@ -128,7 +128,7 @@ export default class Calenda {
     return this;
   };
 
-  public getInfo: Function = (day: number, options: object): IInfo => {
+  public getInfo = (day: number, options: object) => {
     for (const key in this.structure) {
       let daysArr = this.structure[key];
 
@@ -166,7 +166,7 @@ export default class Calenda {
     }
   };
 
-  public moveMonth: Function = (direction: string): Calenda => {
+  public moveMonth = (direction: string) => {
     let currentMonthLength = getMonthLength(this.monthIdx);
 
     return direction === "forward"
